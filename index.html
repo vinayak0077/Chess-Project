@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="chess_piece_move_sound" src="sounds/audiomass-output.mp3" style="visibility: hidden;"></audio>
+    <audio id="game_end_sound" src="sounds/game_end_sound.mp3" style="visibility: hidden;"></audio>
+
+    <div class="container">
+
+        <div class="chess_board">
+    
+            <!-- A‑file -->
+            <button class="board_btn" id="board_btn_a8" btn_name="a8"><img src="" alt="" class="board_btn_img" id="board_btn_img_a8" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_a7" btn_name="a7"><img src="" alt="" class="board_btn_img" id="board_btn_img_a7" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_a6" btn_name="a6"><img src="" alt="" class="board_btn_img" id="board_btn_img_a6" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_a5" btn_name="a5"><img src="" alt="" class="board_btn_img" id="board_btn_img_a5" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_a4" btn_name="a4"><img src="" alt="" class="board_btn_img" id="board_btn_img_a4" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_a3" btn_name="a3"><img src="" alt="" class="board_btn_img" id="board_btn_img_a3" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_a2" btn_name="a2"><img src="" alt="" class="board_btn_img" id="board_btn_img_a2" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_a1" btn_name="a1"><img src="" alt="" class="board_btn_img" id="board_btn_img_a1" onerror="this.style.visibility='hidden'"></button>
+    
+            <!-- B‑file -->
+            <button class="board_btn" id="board_btn_b8" btn_name="b8"><img src="" alt="" class="board_btn_img" id="board_btn_img_b8" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_b7" btn_name="b7"><img src="" alt="" class="board_btn_img" id="board_btn_img_b7" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_b6" btn_name="b6"><img src="" alt="" class="board_btn_img" id="board_btn_img_b6" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_b5" btn_name="b5"><img src="" alt="" class="board_btn_img" id="board_btn_img_b5" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_b4" btn_name="b4"><img src="" alt="" class="board_btn_img" id="board_btn_img_b4" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_b3" btn_name="b3"><img src="" alt="" class="board_btn_img" id="board_btn_img_b3" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_b2" btn_name="b2"><img src="" alt="" class="board_btn_img" id="board_btn_img_b2" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_b1" btn_name="b1"><img src="" alt="" class="board_btn_img" id="board_btn_img_b1" onerror="this.style.visibility='hidden'"></button>
+    
+            <!-- C‑file -->
+            <button class="board_btn" id="board_btn_c8" btn_name="c8"><img src="" alt="" class="board_btn_img" id="board_btn_img_c8" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_c7" btn_name="c7"><img src="" alt="" class="board_btn_img" id="board_btn_img_c7" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_c6" btn_name="c6"><img src="" alt="" class="board_btn_img" id="board_btn_img_c6" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_c5" btn_name="c5"><img src="" alt="" class="board_btn_img" id="board_btn_img_c5" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_c4" btn_name="c4"><img src="" alt="" class="board_btn_img" id="board_btn_img_c4" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_c3" btn_name="c3"><img src="" alt="" class="board_btn_img" id="board_btn_img_c3" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_c2" btn_name="c2"><img src="" alt="" class="board_btn_img" id="board_btn_img_c2" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_c1" btn_name="c1"><img src="" alt="" class="board_btn_img" id="board_btn_img_c1" onerror="this.style.visibility='hidden'"></button>
+    
+            <!-- B‑file -->
+            <button class="board_btn" id="board_btn_d8" btn_name="d8"><img src="" alt="" class="board_btn_img" id="board_btn_img_d8" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_d7" btn_name="d7"><img src="" alt="" class="board_btn_img" id="board_btn_img_d7" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_d6" btn_name="d6"><img src="" alt="" class="board_btn_img" id="board_btn_img_d6" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_d5" btn_name="d5"><img src="" alt="" class="board_btn_img" id="board_btn_img_d5" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_d4" btn_name="d4"><img src="" alt="" class="board_btn_img" id="board_btn_img_d4" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_d3" btn_name="d3"><img src="" alt="" class="board_btn_img" id="board_btn_img_d3" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_d2" btn_name="d2"><img src="" alt="" class="board_btn_img" id="board_btn_img_d2" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_d1" btn_name="d1"><img src="" alt="" class="board_btn_img" id="board_btn_img_d1" onerror="this.style.visibility='hidden'"></button>
+    
+            <!-- B‑file -->
+            <button class="board_btn" id="board_btn_e8" btn_name="e8"><img src="" alt="" class="board_btn_img" id="board_btn_img_e8" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_e7" btn_name="e7"><img src="" alt="" class="board_btn_img" id="board_btn_img_e7" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_e6" btn_name="e6"><img src="" alt="" class="board_btn_img" id="board_btn_img_e6" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_e5" btn_name="e5"><img src="" alt="" class="board_btn_img" id="board_btn_img_e5" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_e4" btn_name="e4"><img src="" alt="" class="board_btn_img" id="board_btn_img_e4" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_e3" btn_name="e3"><img src="" alt="" class="board_btn_img" id="board_btn_img_e3" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_e2" btn_name="e2"><img src="" alt="" class="board_btn_img" id="board_btn_img_e2" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_e1" btn_name="e1"><img src="" alt="" class="board_btn_img" id="board_btn_img_e1" onerror="this.style.visibility='hidden'"></button>
+    
+            <!-- B‑file -->
+            <button class="board_btn" id="board_btn_f8" btn_name="f8"><img src="" alt="" class="board_btn_img" id="board_btn_img_f8" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_f7" btn_name="f7"><img src="" alt="" class="board_btn_img" id="board_btn_img_f7" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_f6" btn_name="f6"><img src="" alt="" class="board_btn_img" id="board_btn_img_f6" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_f5" btn_name="f5"><img src="" alt="" class="board_btn_img" id="board_btn_img_f5" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_f4" btn_name="f4"><img src="" alt="" class="board_btn_img" id="board_btn_img_f4" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_f3" btn_name="f3"><img src="" alt="" class="board_btn_img" id="board_btn_img_f3" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_f2" btn_name="f2"><img src="" alt="" class="board_btn_img" id="board_btn_img_f2" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_f1" btn_name="f1"><img src="" alt="" class="board_btn_img" id="board_btn_img_f1" onerror="this.style.visibility='hidden'"></button>
+    
+            <!-- B‑file -->
+            <button class="board_btn" id="board_btn_g8" btn_name="g8"><img src="" alt="" class="board_btn_img" id="board_btn_img_g8" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_g7" btn_name="g7"><img src="" alt="" class="board_btn_img" id="board_btn_img_g7" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_g6" btn_name="g6"><img src="" alt="" class="board_btn_img" id="board_btn_img_g6" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_g5" btn_name="g5"><img src="" alt="" class="board_btn_img" id="board_btn_img_g5" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_g4" btn_name="g4"><img src="" alt="" class="board_btn_img" id="board_btn_img_g4" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_g3" btn_name="g3"><img src="" alt="" class="board_btn_img" id="board_btn_img_g3" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_g2" btn_name="g2"><img src="" alt="" class="board_btn_img" id="board_btn_img_g2" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_g1" btn_name="g1"><img src="" alt="" class="board_btn_img" id="board_btn_img_g1" onerror="this.style.visibility='hidden'"></button>
+    
+            <!-- B‑file -->
+            <button class="board_btn" id="board_btn_h8" btn_name="h8"><img src="" alt="" class="board_btn_img" id="board_btn_img_h8" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_h7" btn_name="h7"><img src="" alt="" class="board_btn_img" id="board_btn_img_h7" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_h6" btn_name="h6"><img src="" alt="" class="board_btn_img" id="board_btn_img_h6" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_h5" btn_name="h5"><img src="" alt="" class="board_btn_img" id="board_btn_img_h5" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_h4" btn_name="h4"><img src="" alt="" class="board_btn_img" id="board_btn_img_h4" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_h3" btn_name="h3"><img src="" alt="" class="board_btn_img" id="board_btn_img_h3" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_h2" btn_name="h2"><img src="" alt="" class="board_btn_img" id="board_btn_img_h2" onerror="this.style.visibility='hidden'"></button>
+            <button class="board_btn" id="board_btn_h1" btn_name="h1"><img src="" alt="" class="board_btn_img" id="board_btn_img_h1" onerror="this.style.visibility='hidden'"></button>
+    
+        </div>
+    
+        <div class="second_box">
+            <div class="appearance_box">
+                <div class="themes_box">
+                    <h3>Theme</h3>
+                    <div class="theme_select">
+                        <div class="theme_select_option"><img src="Themes/theme1/dark_background_block.png"></div>
+                        <div class="theme_select_option"><img src="Themes/theme1/light_background_block.png"></div>
+                        <div class="theme_select_option"><img src="Themes/theme1/light_background_block.png"></div>
+                        <div class="theme_select_option"><img src="Themes/theme1/light_background_block.png"></div>
+                        <div class="theme_select_option"><img src="Themes/theme1/light_background_block.png"></div>
+                    </div>
+                </div>
+                <div class="palettes_box">
+                    <h3>Palette</h3>
+                    <div class="palette_select">
+                        <div class="palette_select_option"><img src="Themes/theme1/dark_background_block.png"></div>
+                        <div class="palette_select_option"><img src="Themes/theme1/light_background_block.png"></div>
+                        <div class="palette_select_option"><img src="Themes/theme1/light_background_block.png"></div>
+                        <div class="palette_select_option"><img src="Themes/theme1/light_background_block.png"></div>
+                        <div class="palette_select_option"><img src="Themes/theme1/light_background_block.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+<!-- <script src="script_fixed_with_preload.js"></script> -->
+</html>
