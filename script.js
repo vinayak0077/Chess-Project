@@ -191,6 +191,7 @@ function fill_all_available_postions_list(){
 // fill_all_available_postions_list()
 
 function remove_onerror(){
+  console.log("running remove onerror!")
   positions_of_all_light_pieces.forEach(arr => {
     img_element = document.querySelector(`#board_btn_${arr[0]} img`);
     img_element.removeAttribute("onerror");
@@ -1534,3 +1535,4 @@ document.addEventListener("DOMContentLoaded", () => {
   remove_onerror();
   // show_all_themes();
 });
+
